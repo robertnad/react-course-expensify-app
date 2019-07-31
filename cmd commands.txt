@@ -1,0 +1,140 @@
+1)node.js & npm
+2)yarn: C:\Users\name> npm install -g yarn (restart after)
+3)live-server: C:\Users\name>
+4)babel: C:\Users\name>
+
+5)C:\Users\name> cd C:\Users\name\Desktop\react-course-projects\indecision-app
+6)C:\Users\name\Desktop\react-course-projects\indecision-app> live-server public
+7a)...\indecision-app> babel src/playground/____.js --out-file=public/scripts/app.js --presets=env,react --watch
+7b)...\indecision-app> babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+_____LESSON 49: AVOID GLOBAL MODULES_____
+>npm uninstall -g  global remove babel-cli live-server
+>yarn add live-server babel-cli@6.24.1
+
+-in package.json add: 
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "babel src/app.js  --out-file=public/scripts/app.js --presets=env,react --watch"
+  },
+
+...\indecision-app> yarn run serve
+...\indecision-app> yarn run build
+
+_____LESSON 50: INSTALLING AND CONFIGURING WEBPACK_____
+...\indecision-app> yarn add webpack@3.1.0
+
+-in package.json modify: 
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "webpack",
+    "build-babel": "babel src/app.js  --out-file=public/scripts/app.js --presets=env,react --watch"
+  },
+
+  .......
+  ...\indecision-app> yarn run build
+  (delete scripts directory and in index.html have only 1 script tag with bundle.js)
+
+_____LESSON 53_____
+  ...\indecision-app> yarn add react@16.0.0 react-dom@16.0.0
+
+_____LESSON 53_____
+  ...\indecision-app> yarn add babel-core@6.25.0 babel-loader@7.1.1
+
+___TO RUN REACT:
+cd indecision-app
+  ...app> yarn run serve
+  ...app> yarn run build
+
+___RUN EVERYTHING LESSON 57:____________________________
+...app> yarn run dev-server (then visit localhost:8080) BUILDER________
+
+//single build 'run yarn build' that creates bundle.js is needed for production
+
+_____LESSON 58________________________________________
+//eliminate the need for constructor props binding
+...app> yarn add babel-plugin-transform-class-properties@6.24.1
+//add it to .babelrc and restart the server (yarn run dev-server)
+
+//oko 9min objasnjava binding !!!!!
+
+_____LESSON 61________________________________________
+...app> yarn add react-modal@2.2.2
+
+_____LESSON 64________________________________________
+-npm css-loader package
+-npm style-loader package
+...app> yarn add style-loader@0.18.2 css-loader@0.28.4
+
+sass-scss(different way of writing css, we will use css)
+
+...app> yarn add sass-loader@6.0.6 node-sass@4.5.3
+...app> npm i node-sass@latest
+
+_____LESSON 65________________________________________
+normalize.css > not working
+
+sass reference functions
+
+_____LESSON 77________________________________________
+-installing react router - tool for multiple pages
+...app> yarn add react-router-dom@4.2.2
+-historyApiFallback in webpack config (restart devserver after)
+
+_____LESSON 85: REDUX_________________________________
+-in webpack.config change entry to: './src/playground/redux-101.js',
+(default is './src/app.js')
+-visit: http://redux.js.org
+...app> yarn add redux@3.7.2
+...app> yarn run dev-server
+
+_____LESSON 93________________________________________
+...app> yarn add uuid@3.1.0
+
+_____LESSON 93________________________________________
+...app> yarn add babel-plugin-transform-object-rest-spread@6.23.0
+-add to .babelrc: "transform-object-rest-spread"
+
+_____LESSON 101_______________________________________
+-add react-redux library
+...app> yarn add react-redux@5.0.5
+
+_____LESSON 106_______________________________________
+-import moment.js and airbnb react-dates libraries
+...app> yarn add moment@2.18.1 react-dates@12.7.0 react-addons-shallow-compare@15.6.0
+
+_____LESSON 112_______________________________________
+-installing jest for testing
+...app> yarn add jest@20.0.4
+...app> yarn test
+-in package.json: "test": "jest --watch" or ...app> yarn test -- --watch
+
+_____LESSON 118_______________________________________
+...app> yarn add react-test-renderer@16.0.0
+
+_____LESSON 119_______________________________________
+- airbnb/io-enzyme webpage
+...app> yarn add enzyme@3.0.0 enzyme-adapter-react-16@1.0.0 raf@3.3.2
+-import enzyme with separate setupTests.js file inside setupTests
+-make jest.config.js file in main folder
+-configuring jest in package.json folder
+...app> yarn add enzyme-to-json@3.0.1
+
+_____LESSON 131: GIT___________________________________
+...app> git-init
+...app> git status
+...app> git git add . (for all or filename)
+...app> git commit -m "added something"
+...app> git log
+...app>
+
+_____LESSON 132_______________________________________
+- ssh key explanation
+
+_____LESSON 133_______________________________________
+-webpack production
+...app> yarn run build:prod
+
+_____LESSON 134_______________________________________
+...app> yarn add extract-text-webpack-plugin@3.0.0

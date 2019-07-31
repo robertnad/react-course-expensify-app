@@ -131,6 +131,17 @@ _____LESSON 131: GIT___________________________________
 
 _____LESSON 132_______________________________________
 - ssh key explanation
+- open git bash: 
+$ ssh-keygen -t rsa -b 4096 -C "robert.nadilo@gmail.com"
+(click Enter through all options)
+$ ls -a ~/.ssh
+$ eval $(ssh-agent -s)
+$ ssh-add ~/.ssh/id_rsa
+$ clip < ~/.ssh/id_rsa.pub
+- then go to github>settings>SSH and GPG keys>fill Title and Key>click Add SSH key
+...app> ssh -T git@github.com
+...app> git remote add origin git@github.com:robertnad/react-course-expensify-app-nadilo.git
+...app> git push -u origin master
 
 _____LESSON 133_______________________________________
 -webpack production
@@ -138,3 +149,12 @@ _____LESSON 133_______________________________________
 
 _____LESSON 134_______________________________________
 ...app> yarn add extract-text-webpack-plugin@3.0.0
+
+_____LESSON 135_______________________________________
+...app> node server/server.js
+
+_____LESSON 136_______________________________________
+-create heroku account
+...app> heroku --version
+...app> heroku login
+...app> heroku create app-name-something

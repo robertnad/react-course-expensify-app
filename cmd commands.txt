@@ -158,3 +158,14 @@ _____LESSON 136_______________________________________
 ...app> heroku --version
 ...app> heroku login
 ...app> heroku create app-name-something
+...app> git push heroku master
+(git rm package-lock.json
+git add .
+git commit -m "removed package-lock.json"
+git push heroku master)
+
+_____LESSON 137_______________________________________
+...app> yarn add chalk --dev
+...app> yarn install --production
+...app> yarn install
+-devServer.publicPath

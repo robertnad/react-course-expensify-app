@@ -168,4 +168,8 @@ _____LESSON 137_______________________________________
 ...app> yarn add chalk --dev
 ...app> yarn install --production
 ...app> yarn install
+-dist folder
 -devServer.publicPath
+
+_____LESSON 138_______________________________________
+...app> yarn add numeral@2.0.6
